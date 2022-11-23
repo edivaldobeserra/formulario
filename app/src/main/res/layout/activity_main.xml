@@ -20,25 +20,27 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editNome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:background="@color/white"
         android:ems="10"
         android:hint="Nome Completo"
+        android:maxLength="40"
         android:inputType="textPersonName"
         android:padding="15dp" />
 
     <EditText
         android:id="@+id/editIdade"
-        android:layout_width="match_parent"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:background="@color/white"
         android:ems="10"
         android:hint="Idade"
-        android:inputType="textPersonName"
+       android:maxLength="3"
+        android:inputType="number"
         android:padding="15dp" />
 
     <TextView
