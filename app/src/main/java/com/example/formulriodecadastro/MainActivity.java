@@ -39,10 +39,35 @@ public class MainActivity extends AppCompatActivity {
                 String editIdade = idade.getText().toString();
 
                 if (editNome.isEmpty() || editIdade.isEmpty()){
-                    Snackbar.make(view, "Preencha o nome e a idade",Snackbar.LENGTH_SHORT).show();
-                }else{
+                    Snackbar.make(view, "Preencha o nome e a idade", Snackbar.LENGTH_SHORT).show();
+            }else{
+                    RadioButtonSelecionado(view);
+
+
+                }
 
             }
         });
+    }
+    private void RadioButtonSelecionado(View view){
+
+        String editNome = nome.getText().toString();
+        String editIdade = idade.getText().toString();
+
+        if (feminino.isChecked()){
+            resultadoNome.setText(editNome);
+            resultadoIdade.setText(editIdade);
+            resultadoSexo.setText("Sexo:Feminino");
+
+        }else if (masculino.isChecked()){
+
+            resultadoNome.setText(editNome);
+            resultadoIdade.setText(editIdade);
+            resultadoSexo.setText("Sexo:Masculino");
+
+        }else{
+            Snackbar.make(view, "Coloque o seu sexo",Snackbar.LENGTH_SHORT).show();
+
+        }
     }
 }
